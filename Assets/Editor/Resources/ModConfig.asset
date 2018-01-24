@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
+  m_Name: ModConfig
+  m_EditorClassIdentifier: 
+  id: sonic
+  title: Sonic the Hedgehog
+  description: 'Sonic the Hedgehog v1.22
+
+    Sonic the Hedgehog was a popular 16 bit video game from 1991. What it''s doing
+    here on a bomb over 25 years later is anybody''s guess...
+
+
+    Module ID: sonic
+
+
+    Created by: Royal_Flu$h
+
+
+    Manual available here: https://ktane.timwi.de/HTML/Sonic%20the%20Hedgehog.html'
+  version: 1.22
+  outputFolder: build
+  previewImage: {fileID: 2800000, guid: f153ffdd538404f96938da53b5af0b1e, type: 3}
