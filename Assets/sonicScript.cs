@@ -12,7 +12,9 @@ public class sonicScript : MonoBehaviour {
 	public KMSelectable life;
 	public KMSelectable rings;
 	public KMSelectable startButton;
+
 	public KMAudio Audio;
+	
 	public Renderer pass1rend;
 	public Renderer pass2rend;
 	public Renderer pass3rend;
