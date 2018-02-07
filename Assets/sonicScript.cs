@@ -14,7 +14,7 @@ public class sonicScript : MonoBehaviour {
 	public KMSelectable startButton;
 
 	public KMAudio Audio;
-	
+
 	public Renderer pass1rend;
 	public Renderer pass2rend;
 	public Renderer pass3rend;
@@ -314,10 +314,10 @@ public class sonicScript : MonoBehaviour {
 							ringsPress = "spring";
 							break;
 			}
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] boots sound: {1}", moduleId, bootsPress);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] invincible sound: {1}", moduleId, invinciblePress);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] extra life sound: {1}", moduleId, lifePress);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] rings sound: {1}", moduleId, ringsPress);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The boots monitor plays: {1}", moduleId, bootsPress);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The invincible monitor plays: {1}", moduleId, invinciblePress);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The life monitor plays: {1}", moduleId, lifePress);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The rings monitor plays: {1}", moduleId, ringsPress);
 
 
 			int pic1Pick = UnityEngine.Random.Range(0, 5);
@@ -332,9 +332,9 @@ public class sonicScript : MonoBehaviour {
 			int pic4Pick = UnityEngine.Random.Range(0,1);
 			pic4 = pic4Options[pic4Pick];
 
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 1 picture: {1}", moduleId, pic1.name);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 2 picture: {1}", moduleId, pic2.name);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 3 picture: {1}", moduleId, pic3.name);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The level 1 picture is: {1}", moduleId, pic1.name);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 2 picture is: {1}", moduleId, pic2.name);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 3 picture is: {1}", moduleId, pic3.name);
 
 
 
@@ -867,9 +867,9 @@ public class sonicScript : MonoBehaviour {
 							level3 = "life";
 					}
 			}
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 1 answer: {1}", moduleId, level1);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 2 answer: {1}", moduleId, level2);
-			Debug.LogFormat("[Sonic the Hedgehog #{0}] level 3 answer: {1}", moduleId, level3);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The level 1 answer is: {1}", moduleId, level1);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The level 2 answer is: {1}", moduleId, level2);
+			Debug.LogFormat("[Sonic the Hedgehog #{0}] The level 3 answer is: {1}", moduleId, level3);
 
 	}
 
@@ -937,14 +937,14 @@ public class sonicScript : MonoBehaviour {
 								displayedImage.GetComponent<Renderer>().material.mainTexture = pic2;
 								Audio.PlaySoundAtTransform("ringCollect", transform);
 								pass1rend.GetComponent<Renderer>().enabled = true;
-								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed {1}. That was correct.", moduleId, level1);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed the {1} monitor. That was correct.", moduleId, level1);
 								stage++;
 						}
 						else
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! I was expecting {1}. Module reset.", moduleId, level1);
+								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level1);
 								Reset();
 								Begin();
 						}
@@ -956,14 +956,14 @@ public class sonicScript : MonoBehaviour {
 								displayedImage.GetComponent<Renderer>().material.mainTexture = pic3;
 								Audio.PlaySoundAtTransform("ringCollect", transform);
 								pass2rend.GetComponent<Renderer>().enabled = true;
-								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed {1}. That was correct.", moduleId, level2);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed the {1} monitor. That was correct.", moduleId, level2);
 								stage++;
 						}
 						else
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! I was expecting {1}. Module reset.", moduleId, level2);
+								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level2);
 								Reset();
 								Begin();
 						}
@@ -976,14 +976,14 @@ public class sonicScript : MonoBehaviour {
 								Audio.PlaySoundAtTransform("disarmed", transform);
 								pass3rend.GetComponent<Renderer>().enabled = true;
 								GetComponent<KMBombModule>().HandlePass();
-								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed {1}. That was correct. Module disarmed.", moduleId, level3);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] You pressed the {1} monitor. That was correct. Module disarmed.", moduleId, level3);
 								stage++;
 						}
 						else
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! I was expecting {1}. Module reset.", moduleId, level3);
+								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level3);
 								Reset();
 								Begin();
 						}
