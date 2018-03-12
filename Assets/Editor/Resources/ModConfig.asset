@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: sonic
   title: Sonic the Hedgehog
-  description: 'Sonic the Hedgehog v1.3
+  description: 'Sonic the Hedgehog v1.31
 
     Sonic the Hedgehog was a popular 16 bit video game from 1991. What it''s doing
     here on a bomb over 25 years later is anybody''s guess...
@@ -26,6 +26,6 @@ MonoBehaviour:
 
 
     Manual available here: https://ktane.timwi.de/HTML/Sonic%20the%20Hedgehog.html'
-  version: 1.3
+  version: 1.31
   outputFolder: build
   previewImage: {fileID: 2800000, guid: f153ffdd538404f96938da53b5af0b1e, type: 3}

@@ -944,7 +944,7 @@ public class sonicScript : MonoBehaviour {
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level1);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level1);
 								Reset();
 								Begin();
 						}
@@ -963,7 +963,7 @@ public class sonicScript : MonoBehaviour {
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level2);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level2);
 								Reset();
 								Begin();
 						}
@@ -983,7 +983,7 @@ public class sonicScript : MonoBehaviour {
 						{
 								Audio.PlaySoundAtTransform("ringLoss", transform);
 								GetComponent<KMBombModule>().HandleStrike();
-								Debug.LogFormat("[Sonic the Hedgehog#{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level3);
+								Debug.LogFormat("[Sonic the Hedgehog #{0}] Strike! You pressed the {1} monitor. I was expecting the {2} monitor. Module reset.", moduleId, buttonName, level3);
 								Reset();
 								Begin();
 						}
